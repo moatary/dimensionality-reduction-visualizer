@@ -20,7 +20,8 @@ To visualize and compare different unsupervised dimensionality reduction techniq
 
 It must be noted that, before using SVD function, sparsify your data using scipy.sparse.lil_matrix or other scipy sparse functions.
 
-# The supervised part of the codes, provide 4 different variations of Linear Discriminant Analysis (LDA), each of which works well in its approprate context. By checking out visualization results of classification of following  LDA variations, you see each next one works more accurately than the previous one : 
+# The supervised part of the codes:
+provides 4 different variations of Linear Discriminant Analysis (LDA), each of which works well in its approprate context. By checking out visualization results of classification of following  LDA variations, you see each next one works more accurately than the previous one : 
 - The function named "lda_sklearn" (as Fisher LDA), does not function well in datas having nullspace in their within-class covariance matrix. But generally they require less computational resources versus other variations.
 - Function with name "lda_usual", prevents effects of within-class covariance-inverse ill-posed-ness by removing NAN or high eigenvalues of that. 
 - Function with name "lda_fukunaga",  seeks into subspace of lowest eigenvalues of within-class for higher-between-class-eigenvalues-subspaces. This approach even results in better discrimination versus "lda_usual"
