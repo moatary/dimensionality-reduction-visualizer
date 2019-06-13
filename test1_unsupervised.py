@@ -34,7 +34,7 @@ def initialize_DimRed_biomedicaldata(database,databasename='diabetes_', path='',
     for row in ax:
         for col in row:
             numerator+=1
-            col = plotbycolor(database[:, datadims[numerator][0]], database[:, datadims[numerator][1]], plotspecs, colors,plot=col,title=get_display(arabic_reshaper.reshape(u"بعد %1d درمقابل بعد%2d"%tuple(datadims[numerator]))))
+            col = plotbycolor(database[:, datadims[numerator][0]], database[:, datadims[numerator][1]], plotspecs, colors,plot=col,title="dim %1d versus dim%2d"%tuple(datadims[numerator]))
             col.xaxis.set_visible(False)
     fig.savefig('results/' + databasename + '_source.png')
     fig = plt.figure()
